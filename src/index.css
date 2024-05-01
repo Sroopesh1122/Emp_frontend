@@ -1,13 +1,83 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* input{
+  background: transparent;
+} */
+input:focus{
+  outline: none;
+}
+input::placeholder{
+  color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.slideBar{
+  @apply hidden md:block h-full py-7 px-2 bg-white shadow-lg w-[200px] absolute top-0 max-h-full overflow-y-auto
+}
+.slideBar-active{
+  @apply duration-1000 left-[5px]
+}
+.slideBar-hide{
+  @apply duration-1000 left-[-220px]
+}
+.main{
+  @apply md:ml-2 md:absolute md:left-[200px] top-0 md:h-full w-full overflow-auto shadow-xl
+}
+.main-full{
+  /* width: 100%;
+  left: 0; */
+  @apply md:duration-1000 left-0 w-full
+}
+.main-active{
+  /* left: 220px;
+  width: calc(100% - 220px); */
+  @apply md:duration-1000 left-[220px] md:w-[calc(100%-220px)]
+}
+.menu-item{
+  @apply text-start p-3 rounded-sm border-b pl-2 font-semibold mb-8 leading-10 text-black max-w-full overflow-hidden text-ellipsis hover:bg-orange-300 cursor-pointer
+}
+.menu-active{
+  @apply bg-orange-400
+}
+.top-menu-item{
+  @apply cursor-pointer text-black text-[0.7rem] hover:text-orange-400
+}
+.top-menu-active{
+  @apply text-orange-400
+}
+
+.error{
+  @apply text-[0.8rem] text-red-700
+}
+
+.back{
+  transition-duration: 1s;
+  font-size: 1.2rem;
+  color: black;
+}
+.back-left{
+  transition-duration: 1s;
+  transform: rotate(-180deg);
+}
+th{
+  padding: 10px;
+  border: 1px solid black;
+}
+thead tr th {
+
+  position: relative;
+
+}
+thead tr th span{
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
