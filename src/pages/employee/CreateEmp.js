@@ -131,7 +131,7 @@ const CreateEmp = () => {
           className=" flex flex-col md:flex-row flex-1 text-black"
           onSubmit={formik.handleSubmit}
         >
-          <div className="flex justify-center items-center w-full md:w-[50%] p-5">
+          <div className="flex justify-center items-center w-full md:w-[50%] p-0 sm:p-1 md:p-5">
             <div className="w-[70%]">
               <div className="w-full flex items-center justify-center gap-2 bg-white p-1 border border-black rounded-md">
                 <CiUser className="h-5 w-5" />
@@ -206,7 +206,7 @@ const CreateEmp = () => {
               )}
             </div>
           </div>
-          <div className=" w-full md:w-[50%] border-s flex justify-center items-center border-gray-200 p-5">
+          <div className=" w-full md:w-[50%] border-s flex justify-center items-center border-gray-200 p-0 sm:p-1 md:p-5">
             <div className="w-[70%]">
               <div className="w-full flex items-center justify-center gap-2 mt-10 border border-black p-1 rounded-md">
                 <div className="flex gap-1 items-center justify-center">
