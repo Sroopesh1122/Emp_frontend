@@ -75,7 +75,7 @@ function Table({ columns, data }) {
         <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
       </div>
       <div className="w-full h-[63vh] mt-4 overflow-auto text-black">
-        <table className="h-full w-full" {...getTableProps()}>
+        <table className="h-full w-full text-[0.5rem] md:text-[1rem]" {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
@@ -175,7 +175,7 @@ function EmpList() {
         width: 150,
         Cell: ({ value }) => (
           <div className="avatar flex justify-center p-2">
-            <div className="w-16 rounded-full ring-1 object-cover">
+            <div className="w-5 md:w-16 rounded-full ring-1 object-cover">
               <img className="h-full w-full " src={value} alt="img" />
             </div>
           </div>
@@ -211,7 +211,7 @@ function EmpList() {
         Header: "Course",
         accessor: "course",
         Cell: ({ value }) => (
-          <div className="flex flex-col items-center justify-center text-sm">
+          <div className="text-[0.5rem] md:text-[1rem] flex flex-col items-center justify-center text-sm">
             {value?.map((data) => (
               <span className="w-full">
                 {""}
@@ -226,7 +226,7 @@ function EmpList() {
         Header: "Created date",
         accessor: "createdAt",
         Cell: ({ value }) => (
-          <div className="flex items-center justify-center text-sm">
+          <div className="text-[0.5rem] md:text-[1rem] flex items-center justify-center text-sm">
             {getFormattedDateAndTime(value)}
           </div>
         ),
