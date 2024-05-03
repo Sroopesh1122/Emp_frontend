@@ -211,7 +211,7 @@ function EmpList() {
         Header: "Course",
         accessor: "course",
         Cell: ({ value }) => (
-          <div className="text-[0.5rem] md:text-[1rem] flex flex-col items-center justify-center text-sm">
+          <div className="text-[0.5rem] md:text-[1rem] flex flex-col items-center justify-center">
             {value?.map((data) => (
               <span className="w-full">
                 {""}
@@ -226,7 +226,7 @@ function EmpList() {
         Header: "Created date",
         accessor: "createdAt",
         Cell: ({ value }) => (
-          <div className="text-[0.5rem] md:text-[1rem] flex items-center justify-center text-sm">
+          <div className="text-[0.5rem] md:text-[1rem] flex items-center justify-center">
             {getFormattedDateAndTime(value)}
           </div>
         ),
